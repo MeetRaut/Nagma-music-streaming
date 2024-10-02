@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-30"></div> {/* Overlay for contrast */}
       <div className="relative z-10 text-center text-white p-8">
         <h1 className="text-5xl font-bold mb-4">
-          Stream Your Favorite Tunes Anytime, Anywhere!
+          Feel the Sound of You!
         </h1>
         <p className="text-lg mb-6">
           Discover new artists, create playlists, and enjoy ad-free listening. Unlimited music at your fingertips!

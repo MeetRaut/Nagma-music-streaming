@@ -1,5 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
+import Chatbot from "./Chatbot"; // Import the Chatbot component
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="flex-grow mx-4 flex justify-end">
+      <div className="flex-grow mx-4 flex justify-end items-center"> {/* Added items-center here */}
         <input
           type="text"
           placeholder="Search..."
@@ -26,6 +27,10 @@ const Navbar = () => {
         />
       </div>
 
+      {/* Chatbot Icon */}
+      <div className="relative mr-4"> {/* Add margin to separate from profile */}
+        <Chatbot /> {/* Place the Chatbot component here as an icon */}
+      </div>
 
       {/* Profile Icon */}
       <div className="relative">

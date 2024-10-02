@@ -1,5 +1,6 @@
 // src/components/Chatbot.js
 import React, { useState } from 'react';
+import botImage from "../images/bot.jpg"
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +26,16 @@ const Chatbot = () => {
 
   return (
     <div className="relative">
-      {/* Floating Button */}
+      {/* Chatbot Icon Button */}
       <button
-        className="fixed bottom-4 right-4 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 transition"
         onClick={handleToggle}
+        className="focus:outline-none border-2 border-purple-500 rounded-full"
       >
-        💬
+        <img
+          src={botImage} // Replace with your chatbot icon URL
+          alt="Chatbot"
+          className="h-10 w-10 rounded-full"
+        />
       </button>
 
       {/* Chat Window */}
@@ -38,7 +43,7 @@ const Chatbot = () => {
         <div className="fixed bottom-16 right-4 bg-white rounded-lg shadow-lg w-80 h-96 p-4 flex flex-col">
           {/* Chat Header */}
           <div className="flex justify-between items-center border-b pb-2 mb-2">
-            <h2 className="text-lg font-semibold text-purple-600">Chatbot</h2>
+            <h2 className="text-lg font-semibold text-purple-600">Nagma bot</h2>
             <button onClick={handleToggle} className="text-gray-500 hover:text-gray-700">
               ✖️
             </button>
@@ -66,7 +71,7 @@ const Chatbot = () => {
           <div className="flex mt-2">
             <input
               type="text"
-              className="border border-gray-300 rounded-lg p-2 flex-grow focus:outline-none focus:border-purple-600"
+              className="border border-gray-300 rounded-lg p-2 flex-grow focus:outline-none focus:border-purple-600 text-black"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type a message..."
